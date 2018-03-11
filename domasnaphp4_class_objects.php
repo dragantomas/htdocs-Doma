@@ -1,5 +1,7 @@
 <?php 
 
+// Klasa 1 so construct
+
 class Velosiped {
 
 	private $proizvoditel;
@@ -9,36 +11,35 @@ class Velosiped {
 	private $godina;
 
 	public function __construct($p, $t, $g, $gs, $gd){
-		$this->SetProizvoditel($p);
-		$this->SetTip($t);
-		$this->SetGoleminaNaTrkala($g);
-		$this->SetGroupset($gs);
-		$this->SetGodina($gd);
+		$this->setProizvoditel = $p;
+		$this->setTip = $t;
+		$this->setGoleminaNaTrkala = $g;
+		$this->setGroupset =$gs;
+		$this->setGodina = $gd;
 	}
 
-	public function SetProizvoditel($p){
+	public function setProizvoditel($p){
 		return $this->proizvoditel;
 	}
 
-	public function SetTip($t){
+	public function setTip($t){
 		return $this->tip;
 	}
 
-	public function SetGoleminaNaTrkala($g){
-			return $this->goleminaNaTrkala;
+	public function setGoleminaNaTrkala($g){
+		return $this->goleminaNaTrkala;
+	}
+
+	public function setGroupset($gs){
+		return $this->groupset;
 		}
 
-	public function SetGroupset($p){
-			return $this->groupset;
+	public function setGodina($gd){
+		return $this->godina;
 		}
-
-	public function SetProizvoditel($p){
-			return $this->proizvoditel;
-		}
-
 
 	public function IzbranVelosiped() {
-		echo "Izbran e".$this->proizvoditel.' od tipot '.$this->tip.' so golemina na trkala od '.$this->goleminaNaTrkala.', so '.$this->groupset.' proizveden vo '.$this->godina.'.';
+		echo 'Izbraniot velosiped e od proizvoditelot '.$this->setProizvoditel.' od tipot '.$this->setTip.' so golemina na trkala od '.$this->setGoleminaNaTrkala.', so '.$this->setGroupset.' proizveden vo '.$this->setGodina.'.';
 	}
 }
 
@@ -46,6 +47,10 @@ $v = new Velosiped('Scott', 'road bike', '700C', 'Shimano 105', '2017');
 
 $v->IzbranVelosiped();
 
-print_r($v);
+// KLASA 2
+
+
+
+
 
  ?>
